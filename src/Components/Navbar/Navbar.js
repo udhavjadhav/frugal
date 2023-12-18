@@ -28,9 +28,14 @@ export function Navbar() {
       <div className="mx-auto flex max-w-14xl items-center justify-between px-3 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <img className="logo" src="assets/fipl.png" alt="logo" />
-          <span className="font-bold">Frugal Innovations</span>
+          <div className="navbar-heading">
+            <span className="font-bold">Frugal Innovations Pvt. Ltd</span>
+            <span className="sub-heading ml-4 text-lg font-normal">
+              Delivering value through innovation...
+            </span>
+          </div>
         </div>
-        <div className="hidden grow items-start lg:flex">
+        <div className="hidden lg:flex">
           <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
@@ -47,7 +52,7 @@ export function Navbar() {
             ))}
           </ul>
         </div>
-        <div className="hidden space-x-2 lg:block">
+        {/* <div className="hidden space-x-2 lg:block">
           <button
             type="button"
             className="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-black hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
@@ -60,18 +65,23 @@ export function Navbar() {
           >
             Log In
           </button>
-        </div>
+        </div> */}
         <div className="lg:hidden">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
         </div>
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden">
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="px-3 pb-6 pt-5">
+              <div className="px-1 pb-6 pt-5">
                 <div className="flex items-center justify-between">
-                  <div className="inline-flex items-center space-x-2">
-                    <img className="logo" src="assets/fipl.png" alt="logo" />
-                    <span className="font-bold">Frugal Innovations</span>
+                  <img className="logo" src="assets/fipl.png" alt="logo" />
+                  <div className="navbar-heading">
+                    <span className="font-bold">
+                      Frugal Innovations Pvt. Ltd
+                    </span>
+                    <span className="sub-heading ml-4 text-lg font-normal">
+                      Delivering value through innovation...
+                    </span>
                   </div>
                   <div className="-mr-2">
                     <button
@@ -101,20 +111,6 @@ export function Navbar() {
                       </a>
                     ))}
                   </nav>
-                </div>
-                <div className="mt-2 space-y-2">
-                  <button
-                    type="button"
-                    className="w-full rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                  >
-                    Sign In
-                  </button>
-                  <button
-                    type="button"
-                    className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                  >
-                    Log In
-                  </button>
                 </div>
               </div>
             </div>
