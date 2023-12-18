@@ -18,7 +18,7 @@ export function About() {
               About us
             </p>
           </div>
-          <p className="text-3xl font-bold text-gray-900 md:text-5xl md:leading-10 mt-0">
+          <p className="text-3xl font-bold text-gray-900 md:text-5xl md:leading-10 mt-3">
             Made with love, right here in India
           </p>
           <p className="max-w-4xl text-base text-gray-600 md:text-xl">

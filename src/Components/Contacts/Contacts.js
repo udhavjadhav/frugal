@@ -1,6 +1,20 @@
-import React from "react";
-
+import React, { useState } from "react";
+import "../../global.css";
 export function Contacts() {
+  const [org, setOrg] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const sendMsg = (e) => {
+    if (org === "" || name === "" || email === "") {
+      setError("Required organization, name and email!");
+      setSuccess("");
+    } else {
+      setSuccess("Thanks for sending message :)");
+      setError("");
+    }
+  };
   return (
     <div>
       <div className="mx-auto max-w-14xl px-4">
@@ -19,46 +33,52 @@ export function Contacts() {
                   <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
                     <div className="grid w-full  items-center gap-1.5">
                       <label
-                        className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className="require-label text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         htmlFor="first_name"
                       >
-                       Your Organization
+                        Your Organization
                       </label>
                       <input
+                        onChange={(e) => setOrg(e.target.value)}
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                         type="text"
                         id="first_name"
-                        placeholder="Your Organization"
+                        placeholder="Enter Your Organization"
+                        required
                       />
                     </div>
                     <div className="grid w-full  items-center gap-1.5">
                       <label
-                        className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className="require-label text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         htmlFor="last_name"
                       >
                         Your Name
                       </label>
                       <input
+                        onChange={(e) => setName(e.target.value)}
                         className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                         type="text"
                         id="last_name"
-                        placeholder="Your Name"
+                        placeholder="Enter Your Name"
+                        required
                       />
                     </div>
                   </div>
 
                   <div className="grid w-full  items-center gap-1.5">
                     <label
-                      className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      className="require-label text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       htmlFor="email"
                     >
                       Your Email
                     </label>
                     <input
+                      onChange={(e) => setEmail(e.target.value)}
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                       type="text"
                       id="email"
-                      placeholder="Your Email"
+                      placeholder="Enter Your Email"
+                      required
                     />
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
@@ -66,13 +86,13 @@ export function Contacts() {
                       className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       htmlFor="phone_number"
                     >
-                      Your Contact Number
+                      Your Contact Number (Optional)
                     </label>
                     <input
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
                       type="tel"
                       id="phone_number"
-                      placeholder="Your Contact Number"
+                      placeholder="Enter Your Contact Number"
                     />
                   </div>
                   <div className="grid w-full  items-center gap-1.5">
@@ -80,7 +100,7 @@ export function Contacts() {
                       className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       htmlFor="message"
                     >
-                      Message
+                      Message (Optional)
                     </label>
                     <textarea
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
@@ -90,11 +110,17 @@ export function Contacts() {
                     />
                   </div>
                   <button
+                    onClick={sendMsg}
                     type="button"
                     className="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Send Message
                   </button>
+                  {error ? (
+                    <p className="error">{error && error}</p>
+                  ) : (
+                    <p className="success">{success && success}</p>
+                  )}
                 </form>
               </div>
             </div>
