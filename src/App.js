@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./global.css";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { About } from "./Components/About/About";
-// import { Contacts } from "./Components/Contacts/Contacts";
+// import Contacts from "./Components/Contacts/Contacts";
 import { Footer } from "./Components/Footer/Footer";
 import CarouselComponent from "./Components/Carousel/CarouselComponent";
 

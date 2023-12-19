@@ -26,7 +26,7 @@ export function Navbar({ scrollToAbout }) {
             <li>
               <a
                 href="#"
-                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3"
+                className="anchor inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3"
               >
                 Home
                 <span>
@@ -36,7 +36,7 @@ export function Navbar({ scrollToAbout }) {
               <a
                 onClick={scrollToAbout}
                 href="#"
-                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3 ml-5"
+                className="anchor inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3 ml-5"
               >
                 About
                 <span>
@@ -46,7 +46,7 @@ export function Navbar({ scrollToAbout }) {
               <a
                 onClick={scrollToAbout}
                 href="#"
-                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3 ml-5"
+                className="anchor  inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3 ml-5"
               >
                 Contacts
                 <span>
