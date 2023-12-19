@@ -1,22 +1,8 @@
 import React from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import "../../global.css";
-const menuItems = [
-  {
-    name: "Home",
-    href: "#",
-  },
-  {
-    name: "About",
-    href: "#",
-  },
-  {
-    name: "Contact",
-    href: "#",
-  },
-];
 
-export function Navbar() {
+export function Navbar({ scrollToAbout }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
@@ -37,19 +23,37 @@ export function Navbar() {
         </div>
         <div className="hidden lg:flex">
           <ul className="ml-12 inline-flex space-x-8">
-            {menuItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3"
-                >
-                  {item.name}
-                  <span>
-                    <ChevronDown className="ml-2 h-4 w-4" />
-                  </span>
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="#"
+                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3"
+              >
+                Home
+                <span>
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </span>
+              </a>
+              <a
+                onClick={scrollToAbout}
+                href="#"
+                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3 ml-5"
+              >
+                About
+                <span>
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </span>
+              </a>
+              <a
+                onClick={scrollToAbout}
+                href="#"
+                className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900 mt-3 ml-5"
+              >
+                Contacts
+                <span>
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </span>
+              </a>
+            </li>
           </ul>
         </div>
         <div className="lg:hidden">
@@ -82,20 +86,41 @@ export function Navbar() {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
-                    {menuItems.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
-                      >
-                        <span className="ml-3 text-base font-medium text-gray-900">
-                          {item.name}
-                        </span>
-                        <span>
-                          <ChevronRight className="ml-3 h-4 w-4" />
-                        </span>
-                      </a>
-                    ))}
+                    <a
+                      href="#"
+                      className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                    >
+                      <span className="ml-3 text-base font-medium text-gray-900">
+                        Home
+                      </span>
+                      <span>
+                        <ChevronRight className="ml-3 h-4 w-4" />
+                      </span>
+                    </a>
+                    <a
+                      onClick={scrollToAbout}
+                      href="#"
+                      className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                    >
+                      <span className="ml-3 text-base font-medium text-gray-900">
+                        About
+                      </span>
+                      <span>
+                        <ChevronRight className="ml-3 h-4 w-4" />
+                      </span>
+                    </a>
+                    <a
+                      onClick={scrollToAbout}
+                      href="#"
+                      className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                    >
+                      <span className="ml-3 text-base font-medium text-gray-900">
+                        Contact
+                      </span>
+                      <span>
+                        <ChevronRight className="ml-3 h-4 w-4" />
+                      </span>
+                    </a>
                   </nav>
                 </div>
               </div>

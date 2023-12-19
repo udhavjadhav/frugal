@@ -46,15 +46,15 @@
   width: 100vw;
   height: 60vh !important;
 }
-.require-label::before{
-  content: '* ';
+.require-label::before {
+  content: "* ";
   color: red;
 }
-.error{
+.error {
   text-align: center;
   color: red;
 }
-.success{
+.success {
   text-align: center;
   color: green;
 }
