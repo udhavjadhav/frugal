@@ -88,7 +88,7 @@ export function Navbar({ scrollToAbout }) {
                   <nav className="grid gap-y-4">
                     <a
                       href="#"
-                      className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                      className="-m-3 anchor flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
                     >
                       <span className="ml-3 text-base font-medium text-gray-900">
                         Home
@@ -100,7 +100,7 @@ export function Navbar({ scrollToAbout }) {
                     <a
                       onClick={scrollToAbout}
                       href="#"
-                      className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                      className="-m-3 anchor flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
                     >
                       <span className="ml-3 text-base font-medium text-gray-900">
                         About
@@ -112,7 +112,7 @@ export function Navbar({ scrollToAbout }) {
                     <a
                       onClick={scrollToAbout}
                       href="#"
-                      className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
+                      className="-m-3 anchor flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
                     >
                       <span className="ml-3 text-base font-medium text-gray-900">
                         Contact

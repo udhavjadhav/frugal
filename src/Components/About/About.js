@@ -24,7 +24,7 @@ export function About() {
             <p className="about-us text-2xl text-start font-bold">About us</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:p-24">
-            <div className="border rounded p-4">
+            <div className="border rounded p-4 bg-blue-100">
               <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 mb-4">
                 <AirVent className="h-9 w-9 text-gray-700" />
               </div>
@@ -36,7 +36,7 @@ export function About() {
                 decarbonize the energy and transport sectors.
               </p>
             </div>
-            <div className="border rounded p-4 md:p-10">
+            <div className="border rounded bg-pink-100 p-4 md:p-10">
               <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 mb-4">
                 <Lightbulb className="h-9 w-9 text-gray-700" />
               </div>
@@ -68,7 +68,7 @@ export function About() {
             />
           </div>
           {/* locations */}
-          <div className="flex flex-col bg-gray-50 border rounded p-4">
+          <div className="flex flex-col bg-gray-100 border rounded p-4">
             {locations.map((location, index) => (
               <div key={index}>
                 <div className="md:mx-5 max-w-14xl">
