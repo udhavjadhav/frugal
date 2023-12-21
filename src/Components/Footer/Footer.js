@@ -12,7 +12,7 @@ export function Footer() {
             <span className="ml-4 text-lg font-bold">
               Frugal Innovations Pvt. Ltd
             </span>
-            <span className="footer-sub-text ml-4 text-lg font-normal">
+            <span className="footer-sub-text text-indigo-600 ml-4 text-lg font-normal">
               Delivering value through innovation...
             </span>
           </div>

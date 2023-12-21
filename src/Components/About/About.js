@@ -21,12 +21,14 @@ export function About() {
           className="flex items-center flex-col space-y-8 pb-10 pt-12 md:pt-24"
         >
           <div className="max-w-max">
-            <p className="about-us text-2xl text-start font-bold">About us</p>
+            <p className="about-us text-2xl text-indigo-600 text-start font-bold">
+              About us
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:p-24">
-            <div className="border rounded p-4 bg-blue-100">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 mb-4">
-                <AirVent className="h-9 w-9 text-gray-700" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:p-5">
+            <div className="border rounded p-4 bg-blue-50">
+              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-600 mb-4">
+                <AirVent className="h-9 w-9 text-white" />
               </div>
               <p className="text-xl text-center font-bold text-gray-900 md:text-2xl md:leading-10 mt-2">
                 Reversing the impact of Climate change is the need of hour.
@@ -36,9 +38,9 @@ export function About() {
                 decarbonize the energy and transport sectors.
               </p>
             </div>
-            <div className="border rounded bg-pink-100 p-4 md:p-10">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100 mb-4">
-                <Lightbulb className="h-9 w-9 text-gray-700" />
+            <div className="border rounded bg-pink-50  p-4 md:p-10">
+              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-600 mb-4">
+                <Lightbulb className="h-9 w-9 text-white" />
               </div>
               <p className="text-xl text-center font-bold text-gray-900 md:text-2xl md:leading-10 mt-2">
                 Our innovative solutions are designed to
@@ -59,10 +61,10 @@ export function About() {
           </div>
         </div>
 
-        <div className="about-location grid grid-cols-1 md:grid-cols-2 gap-5 md:px-24">
-          <div className="w-full space-y-4 border rounded">
+        <div className="about-location grid grid-cols-1 md:grid-cols-2 gap-5 md:p-5">
+          <div className="w-full space-y-4">
             <img
-              className="map-img rounded-xl object-cover md:h-full"
+              className="map-img object-cover md:h-full"
               src="assets/google-map.png"
               alt=""
             />
@@ -73,14 +75,20 @@ export function About() {
               <div key={index}>
                 <div className="md:mx-5 max-w-14xl">
                   <div className="flex flex-col space-y-8">
-                    <p className="text-2xl font-bold">Reach us</p>
+                    <p className="text-xl md:text-2xl text-indigo-600 font-bold">
+                      Reach us
+                    </p>
                   </div>
-                  <MailCheck className="h-5 w-5 mb-2" />
+                  <div className="flex items-center justify-center rounded-lg  bg-indigo-600 h-10 w-10 top-0 left-0 mt-3 mb-2">
+                    <MailCheck className="h-6 w-6 text-white " />
+                  </div>
                   <p className="text-md md:text-xl font-bold text-gray-800 md:leading-10">
                     Email: {location.email}
                   </p>
-                  <PhoneCall className="h-5 w-5 mb-2 mt-3" />
-                  <p className="text-md font-bold md:text-xl text-gray-800 pb-3">
+                  <div className="flex items-center justify-center rounded-lg  bg-indigo-600 h-10 w-10 top-0 left-0 mt-4 mb-2">
+                    <PhoneCall className="h-6 w-6 text-white" />
+                  </div>
+                  <p className="text-md font-bold md:text-xl text-gray-800">
                     Contact No: {location.contact}
                   </p>
 
@@ -88,8 +96,10 @@ export function About() {
                     key={location.title}
                     className="flex flex-col space-y-3 md:w-2/4 lg:w-1/5"
                   >
-                    <MapPin className="h-5 w-5" />
-                    <p className="wrap-text w-full text-2xl font-semibold text-gray-900">
+                     <div className="flex items-center justify-center rounded-lg  bg-indigo-600 h-10 w-10 top-0 left-0 mt-3 mb-2">
+                    <MapPin className="h-6 w-6 text-white " />
+                  </div>
+                    <p className="wrap-text w-full text-xl md:text-2xl font-bold text-indigo-600">
                       {location.title}
                     </p>
                     <p className="wrap-text w-full md:text-xl text-base text-gray-700">

@@ -10,7 +10,6 @@
 .sub-heading {
   font-size: 12px;
   font-weight: 500;
-  color: blueviolet;
   font-style: italic;
 }
 .logo {
@@ -69,9 +68,8 @@
   flex-direction: column;
 }
 .footer-sub-text {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
-  color: blueviolet;
   font-style: italic;
 }
 
@@ -97,7 +95,8 @@
   }
   .map-img {
     max-width: 100%;
-    max-height: 30vh !important;
+    max-height: 40vh !important;
+    border-radius: 5px;
   }
   .about-location{
     padding: 0 !important;

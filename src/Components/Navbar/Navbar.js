@@ -16,7 +16,7 @@ export function Navbar({ scrollToAbout }) {
           <img className="logo" src="assets/fipl.png" alt="logo" />
           <div className="navbar-heading">
             <span className="font-bold">Frugal Innovations Pvt. Ltd</span>
-            <span className="sub-heading ml-4 text-lg font-normal">
+            <span className="sub-heading text-indigo-600 ml-4 text-lg font-normal">
               Delivering value through innovation...
             </span>
           </div>
@@ -69,7 +69,7 @@ export function Navbar({ scrollToAbout }) {
                     <span className="font-bold">
                       Frugal Innovations Pvt. Ltd
                     </span>
-                    <span className="sub-heading ml-4 text-lg font-normal">
+                    <span className="sub-heading text-indigo-600 ml-4 text-lg font-normal">
                       Delivering value through innovation...
                     </span>
                   </div>
