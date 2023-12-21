@@ -62,13 +62,6 @@ export function About() {
         </div>
 
         <div className="about-location grid grid-cols-1 md:grid-cols-2 gap-5 md:p-5">
-          <div className="w-full space-y-4">
-            <img
-              className="map-img object-cover md:h-full"
-              src="assets/google-map.png"
-              alt=""
-            />
-          </div>
           {/* locations */}
           <div className="flex flex-col bg-gray-100 border rounded p-4">
             {locations.map((location, index) => (
@@ -112,6 +105,13 @@ export function About() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="w-full space-y-4">
+            <img
+              className="map-img object-cover md:h-full"
+              src="assets/google-map.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

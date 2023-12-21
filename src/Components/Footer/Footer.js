@@ -9,7 +9,7 @@ export function Footer() {
         <div className="inline-flex items-center">
           <img className="logo" src="assets/fipl.png" alt="logo" />
           <div className="footer-text">
-            <span className="ml-4 text-lg font-bold">
+            <span className="ml-3 font-bold">
               Frugal Innovations Pvt. Ltd
             </span>
             <span className="footer-sub-text text-indigo-600 ml-4 text-lg font-normal">
